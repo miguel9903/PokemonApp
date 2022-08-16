@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon App</title>
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <link rel="stylesheet" href="../css/pages/favorite-pokemons.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <div class="main-nav__logo">
+                <a href="../index.html">
+                    <img class="main-nav__logo-img" src="../assets/img/pokemon-logo.png" alt="pokemon-logo">
+                </a>
+            </div>
+            <div class="main-nav__buttons">
+                <label class="toggle" for="toggle">
+                    <input id="toggle" class="toggle__checkbox" type="checkbox">
+                    <span class="toggle__check">
+                        <span class="toggle__check-text">OFF</span>
+                    </span>
+                </label>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <h1 class="main-title">Your favorite pokemons</h1>
+        <section class="pokemon-list pokemon-list--favorites"></section>
+        <section class="pokemon-team">
+            <h2 class="secondary-title">Pokemon team</h2>
+            <table class="pokemon-team-table">
+                <thead class="pokemon-team-table__thead">
+                    <tr class="pokemon-team-table__row">
+                        <th class="pokemon-team-table__heading"></th>
+                        <th class="pokemon-team-table__heading">Name</th>
+                        <th class="pokemon-team-table__heading">Hp</th>
+                        <th class="pokemon-team-table__heading">Attack</th>
+                        <th class="pokemon-team-table__heading">Defense</th>
+                        <th class="pokemon-team-table__heading">Speed</th>
+                        <th class="pokemon-team-table__heading">Actions</th>
+                    </tr>
+                </thead>
+                <tbody class="pokemon-team-table__tbody"></tbody>
+            </table>
+        </section>
+        <!-- Favorite Pokemon Catd Template -->
+        <template id="pokemon-card-template">
+            <article class="pokemon-card">
+                <div class="pokemon-card__header">
+                    <img class="pokemon-card__close-icon" src="../assets/img/close-button.png" alt="close-icon">
+                </div>
+                <div class="pokemon-card__body">
+                    <img class="pokemon-card__thumbnail" src="" alt="user">
+                    <h2 class="pokemon-card__title"></h2>
+                    <p class="pokemon-card__experience-points"></p>
+                    <a class="pokemon-card__show-details-button">View details</a>
+                    <button class="pokemon-card__add-button">
+                        <img src="../assets/img/add-button.png" class="pokemon-card__add-button-img" alt="add-button">
+                    </button>
+                </div>
+            </article>
+        </template>
+        <!-- Team Table Row Template -->
+        <template id="pokemon-team-table-row-template">
+            <tr class="pokemon-team-table__row">
+                <td class="pokemon-team-table__data pokemon-team-table__data--image">
+                    <img class="pokemon-team-table__image" alt="pokemon-image">
+                </td>
+                <td class="pokemon-team-table__data"></td>
+                <td class="pokemon-team-table__data"></td>
+                <td class="pokemon-team-table__data"></td>
+                <td class="pokemon-team-table__data"></td>
+                <td class="pokemon-team-table__data"></td>
+                <td class="pokemon-team-table__data">
+                    <button class="pokemon-team-table__delete-button">
+                        <img class="pokemon-team-table__delete-image" src="../assets/img/delete-button.png" alt="delete-button">
+                    </button>
+                </td>
+            </tr>
+        </template>
+    </main>
+    <footer class="footer">
+        <small>Made with &hearts; by Miguel Molina</small>
+    </footer>
+    <script src="../js/favorite-pokemons.js"></script>
+    <script src="../js/components/toggle.js"></script>
+</body>
+</html> 

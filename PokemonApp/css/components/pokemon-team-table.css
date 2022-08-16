@@ -1,0 +1,53 @@
+.pokemon-team {
+  margin-top: 40px;
+}
+
+.pokemon-team-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.pokemon-team-table--hide {
+  display: none;
+}
+
+.pokemon-team-table__row {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.pokemon-team-table__heading {
+  padding: 10px 20px;
+  color: var(--title-text-color);
+  text-align: center;
+}
+
+.pokemon-team-table__data {
+  padding: 10px 20px;
+  color: var(--subtitle-text-color);
+  text-align: center;
+}
+
+.pokemon-team-table__data--image {
+  text-align: center;
+}
+
+.pokemon-team-table__image {
+  width: 40px;
+  height: 40px;
+}
+
+.pokemon-team-table__delete-button {
+  width: 18px;
+  height: 18px;
+  background-color: #fff;
+  border: none;
+}
+
+.pokemon-team-table__delete-button:hover {
+  cursor: pointer;
+}
+
+.pokemon-team-table__delete-image {
+  width: 100%;
+}

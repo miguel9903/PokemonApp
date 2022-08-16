@@ -1,0 +1,76 @@
+/* Pagination styles */
+
+.pagination {
+  padding: 20px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+}
+
+.pokemon-pagination__prev-button,
+.pokemon-pagination__next-button {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: var(--light-blue);
+  border: none;
+  outline: none;
+}
+
+.pokemon-pagination__prev-button:hover,
+.pokemon-pagination__next-button:hover {
+  cursor: pointer;
+}
+
+.pokemon-pagination__pages {
+  font-size: 15px;
+  color: var(--subtitle-text-color);
+  display: flex;
+  align-items: center;
+}
+
+.pokemon-pagination__divisor,
+.pokemon-pagination__current-page,
+.pokemon-pagination__number-of-pages {
+  display: inline-block;
+}
+
+.pokemon-pagination__current-page {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.pokemon-pagination__number-of-pages {
+  font-weight: bold;
+}
+
+.pokemon-pagination__divisor {
+  margin: 0px 10px;
+}
+
+/* Dark styles */
+
+.dark-mode .pokemon-pagination__current-page {
+  color: var(--light-blue);
+  background-color: #fff;
+}
+
+.dark-mode .pokemon-pagination__prev-button,
+.dark-mode .pokemon-pagination__next-button {
+  color: #fff;
+  background-color: #000;
+}

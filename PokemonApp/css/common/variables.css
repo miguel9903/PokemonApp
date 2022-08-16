@@ -1,0 +1,17 @@
+/* Variables */
+:root {
+    --pokemon-blue-dark: #0e4583;
+    --pokemon-blue-light: #3363af;
+    --light-blue: #3498DB;
+    --light-gray: rgba(0,0,0,0.2);
+    --gray-shadow: 1px 1px 5px rgba(0,0,0,0.8); 
+    --title-text-color: #515A5A; 
+    --subtitle-text-color :#99A3A4;
+    --pokemon-card-border: 1px solid #E5E8E8;
+    --dark-background: rgb(0,0,0);
+    --dark-card-background: rgba(0,0,0,0.8);
+    --dark-title-text-color: #515A5A; 
+    --dark-subtitle-text-color :#99A3A4;
+    --valid-field: #27AE60;
+    --invalid-field: #E74C3C;
+}

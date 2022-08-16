@@ -1,0 +1,12 @@
+/* Footer styles */
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  color: var(--subtitle-text-color);
+}
+
+/* Dark styles  */
+.dark-mode .footer {
+  color: #fff;
+}

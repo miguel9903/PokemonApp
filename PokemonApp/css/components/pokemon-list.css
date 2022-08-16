@@ -1,0 +1,204 @@
+/* Pokemon list styles */
+
+.pokemon-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  min-height: 912px;
+}
+
+.pokemon-card {
+  border-radius: 15px;
+  overflow: hidden;
+  border: var(--pokemon-card-border);
+  transition: all 2s;
+}
+
+.pokemon-card__header {
+  height: 150px;
+  background-color: var(--light-blue);
+  position: relative;
+}
+
+.pokemon-card__close-icon,
+.pokemon-card__favorite-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--light-blue);
+  border: none;
+  outline: none;
+}
+
+.pokemon-card__close-icon:hover,
+.pokemon-card__favorite-icon:hover {
+  cursor: pointer;
+}
+
+.pokemon-card__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+  background-color: #fff;
+}
+
+.pokemon-card__thumbnail {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: -100px;
+  background-color: #fff;
+  padding: 5px;
+  z-index: 10;
+}
+
+.pokemon-card__title {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--title-text-color);
+  text-transform: capitalize;
+}
+
+.pokemon-card__power-points {
+  color: var(--subtitle-text-color);
+}
+
+.pokemon-card__experience-points {
+  font-size: 18px;
+  color: var(--subtitle-text-color);
+  margin-bottom: 10px;
+}
+
+.pokemon-card__show-details-button {
+  padding: 10px 20px;
+  color: var(--light-blue);
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.pokemon-card__add-button {
+  width: 18px;
+  height: 18px;
+  margin-top: 5px;
+  background-color: #fff;
+  border: none;
+}
+
+.pokemon-card__empty-message {
+  color: var(--subtitle-text-color);
+}
+
+.pokemon-card__add-button:hover {
+  cursor: pointer;
+}
+
+.pokemon-card__add-button-img {
+  width: 100%;
+}
+
+.pokemon-card__show-details-button:hover {
+  cursor: pointer;
+}
+
+.pokemon-card__show-details-button:active {
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+.pokemon-card__footer {
+  padding: 15px 20px;
+  border-top: var(--pokemon-card-border);
+  background-color: #fff;
+}
+
+.pokemon-card__skills {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pokemon-card__skill {
+  padding: 10px;
+  text-align: center;
+}
+
+.pokemon-card__skill-number {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+}
+
+.pokemon-card__skill-description {
+  display: block;
+  font-size: 15px;
+  color: var(--subtitle-text-color);
+}
+
+/* Dark styles */
+.dark-mode .pokemon-card__body {
+  background-color: var(--dark-card-background);
+}
+
+.dark-mode .pokemon-card__footer {
+  background-color: var(--dark-card-background);
+}
+
+.dark-mode .pokemon-card__header {
+  background-color: var(--pokemon-blue-dark);
+}
+
+.dark-mode .pokemon-card__favorite-icon {
+  background-color: var(--pokemon-blue-dark);
+}
+
+.dark-mode .pokemon-card__show-details-button {
+  color: #fff;
+  background-color: var(--light-blue);
+  border-radius: 10px;
+}
+
+.dark-mode .pokemon-card__add-button {
+  background-color: var(--dark-background);
+}
+
+/* Favorite list styles  */
+
+.pokemon-list--favorites {
+  min-height: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+.pokemon-list--favorites .pokemon-card__header {
+  height: 75px;
+}
+
+.pokemon-list--favorites .pokemon-card__thumbnail {
+  width: 60px;
+  height: 60px;
+  margin-top: -45px;
+}
+
+.pokemon-list--favorites .pokemon-card__body {
+  padding: 10px 0px;
+}
+
+.pokemon-list--favorites .pokemon-card__title {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.pokemon-list--favorites .pokemon-card__experience-points {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.pokemon-list--favorites .pokemon-card__show-details-button {
+  padding: 10px;
+}

@@ -1,0 +1,128 @@
+.pokemon-card {
+  width: 1040px;
+  border-radius: 15px;
+  border: var(--pokemon-card-border);
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--gray-shadow);
+}
+
+.pokemon-card__image-container {
+  flex: 1;
+  height: 520px;
+  background-color: var(--light-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-card__img {
+  filter: drop-shadow(2px 2px 5px rgba(173, 255, 47, 0.8));
+  max-width: 90%;
+}
+
+.pokemon-card__img--not-found {
+  width: 240px;
+}
+
+.pokemon-card__details {
+  flex: 1;
+  height: 520px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+}
+
+.pokemon-card__details-container {
+  width: 90%;
+}
+
+.pokemon-card__name {
+  margin-bottom: 20px;
+  color: var(--subtitle-text-color);
+  text-transform: capitalize;
+}
+
+.pokemon-search-form {
+  display: flex;
+  border: 1px solid var(--light-gray);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.pokemon-search-form__imput {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  flex: 1;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.pokemon-search-form__imput-feedback {
+  display: block;
+  margin-top: 5px;
+  font-size: 12px;
+  font-weight: 200;
+}
+
+.is-invalid {
+  border: 1px solid var(--invalid-field);
+}
+
+.invalid-feedback {
+  color: var(--invalid-field);
+}
+
+.pokemon-search-form__submit-button {
+  padding: 10px 20px;
+  width: 120px;
+  border: none;
+  background-color: var(--light-blue);
+  color: #fff;
+}
+
+.pokemon-search-form__submit-button:hover {
+  cursor: pointer;
+  background-color: rgba(52, 152, 219, 0.8);
+}
+
+.pokemon-details-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.pokemon-details-table__body {
+  padding: 10px;
+}
+
+.pokemon-details-table__row {
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.pokemon-details-table__row:nth-child(even) {
+  background-color: #f2f3f4;
+}
+
+.pokemon-details-table__data {
+  padding: 10px 20px;
+}
+
+.pokemon-details-table__data--stat-name {
+  text-transform: capitalize;
+  color: var(--title-text-color);
+}
+
+.pokemon-details-table__data--stat-value {
+  color: var(--subtitle-text-color);
+}
+
+/* Dark styles */
+
+.dark-mode .pokemon-card__image-container {
+  background-color: var(--pokemon-blue-dark);
+}

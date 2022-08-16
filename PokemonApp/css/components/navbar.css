@@ -1,0 +1,51 @@
+/* Navbar styles */
+
+.main-nav {
+  padding: 16px 32px;
+  background-color: var(--pokemon-blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--gray-shadow);
+}
+
+.main-nav__logo {
+  width: 200px;
+}
+
+.main-nav__logo-img {
+  width: 100%;
+}
+
+.main-nav__buttons {
+  display: flex;
+  align-items: center;
+}
+
+.favorite-pokemons-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-size: 12px;
+  background-color: #fff;
+  text-decoration: none;
+  color: var(--title-text-color);
+}
+
+.favorite-pokemons-button:hover {
+  border: 2px solid var(--light-blue);
+  cursor: pointer;
+}
+
+.favorite-pokemons-button__icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  margin-left: 8px;
+}
+
+.favorite-pokemons-button__icon-img {
+  width: 100%;
+}

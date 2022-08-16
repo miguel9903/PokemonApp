@@ -1,0 +1,25 @@
+/* Common styles */
+.dark-mode {
+  background-color: var(--dark-background);
+}
+
+.main {
+  max-width: 60%;
+  margin: 32px auto;
+}
+
+.main-title,
+.secondary-title {
+  margin-bottom: 12px;
+  color: var(--title-text-color);
+}
+
+.secondary-title--hide {
+  display: none;
+}
+
+/* Dark styles  */
+.dark-mode .main-title,
+.dark-mode .secondary-title {
+  color: #fff;
+}

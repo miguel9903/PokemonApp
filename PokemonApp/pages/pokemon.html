@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon App</title>
+    <link rel="icon" href="../assets/img/favicon.ico">
+    <link rel="stylesheet" href="../css/pages/pokemon-detail.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="main-nav">
+            <div class="main-nav__logo">
+                <a href="../index.html">
+                    <img class="main-nav__logo-img" src="../assets/img/pokemon-logo.png" alt="pokemon-logo">
+                </a>
+            </div>
+            <div class="main-nav__buttons">
+                <label class="toggle" for="toggle">
+                    <input id="toggle" class="toggle__checkbox" type="checkbox">
+                    <span class="toggle__check">
+                        <span class="toggle__check-text">OFF</span>
+                    </span>
+                </label>
+                <a class="favorite-pokemons-button" href="../pages/favorites.html">
+                    Favorites
+                    <span class="favorite-pokemons-button__icon">
+                        <img class="favorite-pokemons-button__icon-img" src="../assets/img/pokeball.png" alt="pokeball-icon">
+                    </span>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="main">
+        <!-- Pokemon Catd Template -->
+        <section class="pokemon-card-details"></section>
+        <div class="spinner-mask">
+            <div class="spinner"></div>
+        </div>
+        <template id="pokemon-card-template">
+            <article class="pokemon-card">
+                <div class="pokemon-card__image-container">
+                    <img class="pokemon-card__img" alt="pokemon">
+                </div>
+                <div class="pokemon-card__details">
+                    <div class="pokemon-card__details-container">
+                        <h2 class="pokemon-card__name"></h2>
+                        <div class="pokemon-card__search-box">
+                            <form class="pokemon-search-form">
+                                <input type="text" class="pokemon-search-form__imput" placeholder="Search a pokemon">
+                                <button class="pokemon-search-form__submit-button">Search</button>
+                            </form>
+                            <span class="pokemon-search-form__imput-feedback"></span>
+                        </div>
+                        <table class="pokemon-details-table">
+                            <tbody class="pokemon-details-table__body"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </article>
+        </template>
+    </main>
+    <footer class="footer">
+        <small>Made with &hearts; by Miguel Molina</small>
+    </footer>
+    <script src="../js/pokemon.js"></script>
+    <script src="../js/forms-validations.js"></script>
+    <script src="../js/components/toggle.js"></script>
+</body>
+</html> 

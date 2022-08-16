@@ -1,0 +1,16 @@
+/* Import variables */
+@import url("../common/variables.css");
+
+/* Import reset CSS */
+@import url("../common/reset.css");
+
+/* Import Common styles */
+@import url("../common/common.css");
+
+/* Import components styles */
+@import url("../components/navbar.css");
+@import url("../components/footer.css");
+@import url("../components/toggle.css");
+@import url("../components/spinner.css");
+@import url("../components/pokemon-card-details.css");
+

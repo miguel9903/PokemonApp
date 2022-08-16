@@ -1,0 +1,61 @@
+/* Toggle styles */
+
+.toggle {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.toggle__checkbox {
+  display: none;
+}
+
+.toggle__check {
+  width: 100px;
+  height: 40px;
+  display: block;
+  background-color: #ccc;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.toggle__check-text {
+  font-size: 12px;
+  font-weight: bold;
+  margin-right: 15px;
+  color: var(--pokemon-blue-dark);
+}
+
+.toggle__check::before {
+  content: "";
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 4px;
+  bottom: 4px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.toggle .toggle__checkbox:checked + .toggle__check {
+  background-color: var(--light-blue);
+}
+
+.toggle .toggle__checkbox:checked + .toggle__check::before {
+  left: 64px;
+}
+
+/* Dark styles */
+.dark-mode .toggle__check {
+  justify-content: flex-start;
+}
+
+.dark-mode .toggle__check-text {
+  margin-left: 15px;
+  color: #fff;
+}
