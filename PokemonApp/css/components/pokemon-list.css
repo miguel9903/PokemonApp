@@ -20,8 +20,8 @@
   position: relative;
 }
 
-.pokemon-card__close-icon,
-.pokemon-card__favorite-icon {
+.pokemon-card__close-button,
+.pokemon-card__favorite-button {
   width: 18px;
   height: 18px;
   display: inline-block;
@@ -31,6 +31,11 @@
   background-color: var(--light-blue);
   border: none;
   outline: none;
+}
+
+.pokemon-card__close-icon,
+.pokemon-card__favorite-icon {
+  width: 100%;
 }
 
 .pokemon-card__close-icon:hover,

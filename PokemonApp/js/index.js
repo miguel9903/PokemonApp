@@ -165,7 +165,8 @@ pokemonList.addEventListener('click', async (e) => {
   // Add to favorites button event
   if (e.target.classList.contains('pokemon-card__favorite-icon')) {
     const addToFavoritesIcon = e.target;
-    const pokemonId = addToFavoritesIcon.parentElement.parentElement.id;
+    const addToFavoritesButton = e.target.parentElement;
+    const pokemonId = addToFavoritesButton.parentElement.parentElement.id;
     const pokemonToAdd = await getPokemonById(`${API_BASE_URL}/pokemon/${pokemonId}/`);
     addToFavoritesIcon.setAttribute("src", "./assets/img/favorite.png");
     addFavoritePokemon(pokemonToAdd);

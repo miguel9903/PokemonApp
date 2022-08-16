@@ -43,21 +43,20 @@ const deletePokemonToTeam = (pokemonId) => {
 }
 
 const deletePokemonToFavorites = (pokemonId) => {
+  console.log(pokemonId);
   const { pokemon_team } = appState;
   const existInTeam = pokemon_team.find(p => p.id == pokemonId);
-  if (existInTeam) {
-    const newAppState = {
-      ...appState,
-      favorite_pokemons: appState.favorite_pokemons.filter(p => p.id != pokemonId)
-    };
-    appState = {...newAppState};
-    localStorage.setItem('app_state', JSON.stringify(newAppState));
-    deletePokemonToTeam(pokemonId);
-    removeChildNodes(favoritePokemonsList);
-    removeChildNodes(pokemonTeamTableBody);
-    drawPokemonTeamTable(appState.pokemon_team);
-    drawFavoritePokemonsList(appState.favorite_pokemons);
-  }
+  const newAppState = {
+    ...appState,
+    favorite_pokemons: appState.favorite_pokemons.filter(p => p.id != pokemonId)
+  };
+  appState = {...newAppState};
+  localStorage.setItem('app_state', JSON.stringify(newAppState));
+  deletePokemonToTeam(pokemonId);
+  removeChildNodes(favoritePokemonsList);
+  removeChildNodes(pokemonTeamTableBody);
+  drawPokemonTeamTable(appState.pokemon_team);
+  drawFavoritePokemonsList(appState.favorite_pokemons);
 }
 
 // Manipulation DOM functions
@@ -128,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
 favoritePokemonsList.addEventListener('click', async (e) => {
   // Add to favorites button event
   if (e.target.classList.contains('pokemon-card__close-icon')) {
-    const deleteFavoritePokemonButton = e.target;
+    const deleteFavoritePokemonButton = e.target.parentElement;
     const pokemonId = deleteFavoritePokemonButton.parentElement.parentElement.id;
     deletePokemonToFavorites(pokemonId);
   }
